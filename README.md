@@ -68,6 +68,8 @@ Try your own samples at [Demo](https://aka.ms/VibeVoice-Demo).
 | VibeVoice-1.5B | 64K | ~90 min | [HF link](https://huggingface.co/microsoft/VibeVoice-1.5B) |
 | VibeVoice-7B-Preview| 32K | ~45 min | [HF link](https://huggingface.co/aoi-ot/VibeVoice-Large) |
 
+📺 Watch the full setup tutorial on YouTube: [![Microsoft VibeVoice AI TTS Tutorial](https://img.youtube.com/vi/3kNI_kc78S8/maxresdefault.jpg)](https://youtu.be/3kNI_kc78S8)
+
 ## Installation
 We recommend to use NVIDIA Deep Learning Container to manage the CUDA environment. 
 
@@ -148,4 +150,5 @@ Non-Speech Audio: The model focuses solely on speech synthesis and does not hand
 Overlapping Speech: The current model does not explicitly model or generate overlapping speech segments in conversations.
 
 We do not recommend using VibeVoice in commercial or real-world applications without further testing and development. This model is intended for research and development purposes only. Please use responsibly.
+
 
