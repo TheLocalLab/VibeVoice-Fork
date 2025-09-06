@@ -25,7 +25,7 @@ The model can synthesize speech up to **90 minutes** long with up to **4 distinc
 
 ### 🔥 News
 
-- **[2025-08-26] 🎉 We Opensource the [VibeVoice-7B-Preview](https://huggingface.co/WestZhang/VibeVoice-Large-pt) model weights!**
+- **[2025-08-26] 🎉 We Opensource the [VibeVoice-7B-Preview](https://huggingface.co/aoi-ot/VibeVoice-Large) model weights!**
 
 ### 📋 TODO
 
@@ -66,7 +66,7 @@ Try your own samples at [Demo](https://aka.ms/VibeVoice-Demo).
 |-------|----------------|----------|----------|
 | VibeVoice-0.5B-Streaming | - | - | On the way |
 | VibeVoice-1.5B | 64K | ~90 min | [HF link](https://huggingface.co/microsoft/VibeVoice-1.5B) |
-| VibeVoice-7B-Preview| 32K | ~45 min | [HF link](https://huggingface.co/WestZhang/VibeVoice-Large-pt) |
+| VibeVoice-7B-Preview| 32K | ~45 min | [HF link](https://huggingface.co/aoi-ot/VibeVoice-Large) |
 
 ## Installation
 We recommend to use NVIDIA Deep Learning Container to manage the CUDA environment. 
@@ -84,8 +84,8 @@ sudo docker run --privileged --net=host --ipc=host --ulimit memlock=-1:-1 --ulim
 
 2. Install from github
 ```bash
-git clone https://github.com/microsoft/VibeVoice.git
-cd VibeVoice/
+git clone https://github.com/TheLocalLab/VibeVoice-Fork.git
+cd VibeVoice-Fork/
 
 pip install -e .
 ```
@@ -100,17 +100,17 @@ apt update && apt install ffmpeg -y # for demo
 python demo/gradio_demo.py --model_path microsoft/VibeVoice-1.5B --share
 
 # For 7B model
-python demo/gradio_demo.py --model_path WestZhang/VibeVoice-Large-pt --share
+python demo/gradio_demo.py --model_path aoi-ot/VibeVoice-Large --share
 ```
 
 ### Usage 2: Inference from files directly
 ```bash
 # We provide some LLM generated example scripts under demo/text_examples/ for demo
 # 1 speaker
-python demo/inference_from_file.py --model_path WestZhang/VibeVoice-Large-pt --txt_path demo/text_examples/1p_abs.txt --speaker_names Alice
+python demo/inference_from_file.py --model_path aoi-ot/VibeVoice-Large --txt_path demo/text_examples/1p_abs.txt --speaker_names Alice
 
 # or more speakers
-python demo/inference_from_file.py --model_path WestZhang/VibeVoice-Large-pt --txt_path demo/text_examples/2p_music.txt --speaker_names Alice Yunfan
+python demo/inference_from_file.py --model_path aoi-ot/VibeVoice-Large --txt_path demo/text_examples/2p_music.txt --speaker_names Alice Yunfan
 ```
 
 ## FAQ
@@ -148,3 +148,4 @@ Non-Speech Audio: The model focuses solely on speech synthesis and does not hand
 Overlapping Speech: The current model does not explicitly model or generate overlapping speech segments in conversations.
 
 We do not recommend using VibeVoice in commercial or real-world applications without further testing and development. This model is intended for research and development purposes only. Please use responsibly.
+
